@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import dimy from "../public/dimy.png";
+import { GithubIcon, Linkedin, Text } from "lucide-react";
+import Link from "next/link";
 
 export default function MainSection() {
   return (
@@ -28,14 +30,29 @@ export default function MainSection() {
           carreira tech
         </p>
 
-        <div className="mt-10 flex items-center justify-start gap-3 font-semibold">
-          <a href="" className="red-underline">
+        <div className="mt-10 flex items-center justify-start gap-5 font-semibold">
+          <Link href="/articles" className="red-underline flex space-x-1">
+            <Text />
+            <span>Blogs!</span>
+          </Link>
+          <a
+            href="https://github.com/dimitrymm"
+            className="red-underline flex space-x-1"
+          >
+            <GithubIcon />
             <span>Github</span>
           </a>
-          <a href="" className="red-underline">
+          <a
+            href="https://www.linkedin.com/in/dimitrymm/"
+            className="red-underline flex space-x-1"
+          >
+            <Linkedin />
             <span>LinkedIn</span>
           </a>
-          <a href="" className="red-underline">
+          <a
+            href="https://bsky.app/profile/dimitrymm.bsky.social"
+            className="red-underline space-x-1"
+          >
             <span>BluSky</span>
           </a>
         </div>

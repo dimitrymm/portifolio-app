@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Tomorrow } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 
 const tomorow = Tomorrow({
   subsets: ["latin"],
@@ -21,8 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={tomorow.className}>
-      <body>
+    <html lang="en">
+      <body
+        className={twMerge(
+          tomorow.className,
+          "mx-auto lg:max-w-5xl min-h-screen sm:p-10 p-5"
+        )}
+      >
         <div>
           <Header />
           <div></div>
