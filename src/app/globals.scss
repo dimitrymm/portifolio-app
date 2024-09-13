@@ -18,6 +18,6 @@
   }
 
   .red-underline {
-    @apply underline decoration-red-900 decoration-2 underline-offset-4 hover:bg-red-900 px-1;
+    @apply underline decoration-red-900 decoration-2 underline-offset-4 hover:bg-red-900 rounded-xl p-1 transition duration-200;
   }
 }

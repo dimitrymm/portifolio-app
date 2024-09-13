@@ -2,6 +2,8 @@ import React from "react";
 
 import { createClient } from "@/prismicio";
 import PostItem from "@/components/Posts/PostItem";
+import Link from "next/link";
+import { CircleArrowRight } from "lucide-react";
 
 export default async function Articles() {
   const prismicClient = createClient();
@@ -16,6 +18,10 @@ export default async function Articles() {
           <PostItem key={post.id} post={post} />
         ))}
       </div>
+      <Link href="/articles" className="flex red-underline w-fit">
+        <CircleArrowRight className="" />
+        Mais Artigos!
+      </Link>
     </article>
   );
 }

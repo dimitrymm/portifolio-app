@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import dimy from "../public/dimy.png";
 import { GithubIcon, Linkedin, Text } from "lucide-react";
 import Link from "next/link";
+import EffectMachineText from "./EffectMachineText";
 
 export default function MainSection() {
   return (
@@ -16,10 +18,16 @@ export default function MainSection() {
           />
 
           <div className="flex flex-col">
-            <h1 className="text-3xl font-bold sm:text-4xl">
-              Conheça o Dimitry
-            </h1>
-            <p className="text-neutral-500">Desenvolvedor Front-End</p>
+            <div className="text-3xl font-bold sm:text-4xl">
+              <EffectMachineText text="Conheça o Dimitry" hideCursor />
+            </div>
+            <div className="text-neutral-500">
+              <EffectMachineText
+                text="Desenvolvedor Front-End"
+                delay={1300}
+                hideCursor
+              />
+            </div>
           </div>
         </div>
 
@@ -30,28 +38,28 @@ export default function MainSection() {
           carreira tech
         </p>
 
-        <div className="mt-10 flex items-center justify-start gap-5 font-semibold">
+        <div className="mt-10 flex items-center justify-start lg:gap-1 sm:gap-7 font-semibold">
           <Link href="/articles" className="red-underline flex space-x-1">
             <Text />
             <span>Blogs!</span>
           </Link>
           <a
             href="https://github.com/dimitrymm"
-            className="red-underline flex space-x-1"
+            className="red-underline flex "
           >
             <GithubIcon />
             <span>Github</span>
           </a>
           <a
             href="https://www.linkedin.com/in/dimitrymm/"
-            className="red-underline flex space-x-1"
+            className="red-underline flex "
           >
             <Linkedin />
             <span>LinkedIn</span>
           </a>
           <a
             href="https://bsky.app/profile/dimitrymm.bsky.social"
-            className="red-underline space-x-1"
+            className="red-underline "
           >
             <span>BluSky</span>
           </a>

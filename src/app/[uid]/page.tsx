@@ -24,9 +24,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <header className="flex flex-col gap-4">
         <Link
           href=".."
-          className="hover: opacity-80 transition-opacity flex gap-2 items-center mb-5"
+          className="hover:opacity-80 transition-opacity flex gap-2 items-center mb-5"
         >
-          <CircleArrowLeft /> Voltar
+          <CircleArrowLeft className="" color="#c90000" /> Voltar
         </Link>
         <h1 className="text-3xl font-bold">{asText(post.data.title)}</h1>
         <h2 className="text-xl">{asText(post.data.subtitle)}</h2>
