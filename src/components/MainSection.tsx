@@ -17,18 +17,18 @@ export default function MainSection() {
             className="aspect-square h-28 w-28 rounded-full border-2 border-red-900"
           />
 
-          <div className="flex flex-col">
+          <h1 className="flex flex-col">
             <div className="text-3xl font-bold sm:text-4xl">
               <EffectMachineText text="Conheça o Dimitry" hideCursor />
             </div>
-            <div className="text-neutral-500">
+            <span className="text-neutral-500">
               <EffectMachineText
                 text="Desenvolvedor Front-End"
                 delay={1300}
                 hideCursor
               />
-            </div>
-          </div>
+            </span>
+          </h1>
         </div>
 
         <p className="mx-auto mt-10 w-auto max-w-3xl text-left text-lg font-light">

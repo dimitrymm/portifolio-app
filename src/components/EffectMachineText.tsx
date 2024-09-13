@@ -33,7 +33,9 @@ export default function EffectMachineText({
     <div>
       {text}
       {showCursor && (
-        <span className="animate-animar-cursor text-xl md:text-2xl ml-1 font-medium"></span>
+        <span className="animate-animar-cursor text-3xl md:text-2xl ml-1 font-medium">
+          |
+        </span>
       )}
     </div>
   );
