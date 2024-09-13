@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Tomorrow } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { Analytics } from "@vercel/analytics/react";
 
 const tomorow = Tomorrow({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         </div>
         <div className="mt-16 sm:mt-24">{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
