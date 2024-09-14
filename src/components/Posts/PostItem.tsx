@@ -10,7 +10,7 @@ interface PostItemProps {
 
 export default function PostItem({ post }: PostItemProps) {
   return (
-    <div className="flex flex-col gap-2 py-4 bg-red-950 transition duration-500 hover:bg-red-900 rounded-xl px-1">
+    <div className=" relative flex flex-col gap-2 py-4 bg-red-950 transition duration-500 hover:bg-red-900 rounded-xl px-1">
       <Link
         className="font-medium transition-opacity hover:opacity-70"
         href={post.uid}
@@ -21,6 +21,14 @@ export default function PostItem({ post }: PostItemProps) {
           </h3>
           <p className="font-normal">{asText(post.data.subtitle)}</p>
         </div>
+        <div
+          id="preview-image"
+          className="w-full h-36 bg-cover bg-center rounded-xl"
+          style={{
+            backgroundImage: `url(${post.data.image?.url})`,
+            opacity: 0.2, // Opacidade da imagem de fundo
+          }}
+        ></div>
       </Link>
       <p className="text-sm">
         Por{" "}
