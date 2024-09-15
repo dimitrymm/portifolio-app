@@ -44,10 +44,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
             <main className="flex flex-col gap-4 font-light">
                 {post.data.content.map((item, index) => (
                     <section key={index}>
-                        <h3 className="text-2xl font-medium ">
+                        <h3 className="text-2xl font-medium mb-3">
                             {asText(item.title)}
                         </h3>
-                        <PrismicRichText field={item.body} />
+                        <article className="space-y-1">
+                            <PrismicRichText field={item.body} />
+                        </article>
                     </section>
                 ))}
             </main>

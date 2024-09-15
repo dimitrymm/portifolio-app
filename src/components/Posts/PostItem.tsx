@@ -20,9 +20,17 @@ export default function PostItem({ post }: PostItemProps) {
                     </h3>
                     <p className="font-normal">{asText(post.data.subtitle)}</p>
                 </div>
+
+                <div
+                    className="mt-1 relative w-full h-48 bg-cover bg-center rounded-xl"
+                    style={{
+                        backgroundImage: `url(${post.data.image?.url})`,
+                        opacity: 0.5,
+                    }}
+                ></div>
             </Link>
             <p className="text-sm">
-                Por{' '}
+                Por{': '}
                 <Link className="hover:underline" href="#">
                     {post.data.autor}
                 </Link>
