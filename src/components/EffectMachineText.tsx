@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface EffectProps {
   text: string;
@@ -13,7 +13,7 @@ export default function EffectMachineText({
   hideCursor,
   delay = 200,
 }: EffectProps) {
-  const [text, setText] = useState<string>("");
+  const [text, setText] = useState<string>('');
   const [showCursor, setShowCursor] = useState<boolean>(false);
 
   const writeOnScreen = (text: string, i = 0) => {

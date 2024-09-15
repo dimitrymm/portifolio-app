@@ -1,10 +1,10 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import dimy from "../public/dimy.png";
-import { GithubIcon, Linkedin, Text } from "lucide-react";
-import Link from "next/link";
-import EffectMachineText from "./EffectMachineText";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import dimy from '../public/dimy.png';
+import { GithubIcon, Linkedin, Text } from 'lucide-react';
+import Link from 'next/link';
+import EffectMachineText from './EffectMachineText';
 
 export default function MainSection() {
   return (

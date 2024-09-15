@@ -1,8 +1,7 @@
-import React from "react";
-import { AllDocumentTypes } from "../../../prismicio-types";
-import Link from "next/link";
-import dayjs from "dayjs";
-import { asText } from "@prismicio/client";
+import { asText } from '@prismicio/client';
+import dayjs from 'dayjs';
+import Link from 'next/link';
+import { AllDocumentTypes } from '../../../prismicio-types';
 
 interface PostItemProps {
   post: AllDocumentTypes;
@@ -23,12 +22,12 @@ export default function PostItem({ post }: PostItemProps) {
         </div>
       </Link>
       <p className="text-sm">
-        Por{" "}
+        Por{' '}
         <Link className="hover:underline" href="#">
           {post.data.autor}
         </Link>
         <time dateTime="2024-09-12" className="text-gray-300">
-          - {dayjs(post.first_publication_date).format("DD/MM/YYYY")}
+          - {dayjs(post.first_publication_date).format('DD/MM/YYYY')}
         </time>
       </p>
     </div>

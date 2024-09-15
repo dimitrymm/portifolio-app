@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { createClient } from "@/prismicio";
-import PostItem from "@/components/Posts/PostItem";
-import Link from "next/link";
-import { CircleArrowRight } from "lucide-react";
+import { createClient } from '@/prismicio';
+import PostItem from '@/components/Posts/PostItem';
+import Link from 'next/link';
+import { CircleArrowRight } from 'lucide-react';
 
 export default async function Articles() {
   const prismicClient = createClient();
-  const posts = await prismicClient.getAllByType("post_blog").catch((e) => {
+  const posts = await prismicClient.getAllByType('post_blog').catch((e) => {
     console.error(e);
     return [];
   });

@@ -1,6 +1,6 @@
-import Articles from "@/components/Articles";
-import Knowledge from "@/components/Knowledge";
-import MainSection from "@/components/MainSection";
+import Articles from '@/components/Articles';
+import Knowledge from '@/components/Knowledge';
+import MainSection from '@/components/MainSection';
 
 export default function Home() {
   return (

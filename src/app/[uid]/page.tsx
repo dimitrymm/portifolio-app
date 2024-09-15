@@ -1,12 +1,11 @@
-import { CircleArrowLeft } from "lucide-react";
-import Link from "next/link";
-import React from "react";
-import { createClient } from "@/prismicio";
-import { notFound } from "next/navigation";
-import { PrismicImage, PrismicRichText } from "@prismicio/react";
-import dayjs from "dayjs";
-import { asText } from "@prismicio/client";
-import "./styles.scss";
+import { createClient } from '@/prismicio';
+import { asText } from '@prismicio/client';
+import { PrismicImage, PrismicRichText } from '@prismicio/react';
+import dayjs from 'dayjs';
+import { CircleArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import './styles.scss';
 
 interface BlogPostProps {
   params: {
@@ -17,7 +16,7 @@ interface BlogPostProps {
 export default async function BlogPost({ params }: BlogPostProps) {
   const prismicClient = createClient();
   const post = await prismicClient
-    .getByUID("post_blog", params.uid)
+    .getByUID('post_blog', params.uid)
     .catch(() => notFound());
   return (
     <div className="flex flex-col gap-4" id="blogPost">
@@ -35,8 +34,8 @@ export default async function BlogPost({ params }: BlogPostProps) {
           className="h-auto w-auto rounded-xl"
         />
         <section>
-          {post.data.autor} - Criado em{" "}
-          {dayjs(post.first_publication_date).format("DD/MM/YYYY")}
+          {post.data.autor} - Criado em{' '}
+          {dayjs(post.first_publication_date).format('DD/MM/YYYY')}
         </section>
       </header>
       <hr />
