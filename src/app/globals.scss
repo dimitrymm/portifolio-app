@@ -3,21 +3,21 @@
 @import 'tailwindcss/utilities';
 
 @layer utilities {
-  #skills-table td,
-  #skills-table th {
-    @apply py-4;
-  }
+    #skills-table td,
+    #skills-table th {
+        @apply py-4;
+    }
 }
 
 @layer base {
-  * {
-    @apply scroll-mt-24 scroll-smooth text-neutral-300;
-  }
-  body {
-    @apply bg-neutral-900;
-  }
+    * {
+        @apply scroll-mt-24 scroll-smooth text-neutral-300;
+    }
+    body {
+        @apply bg-neutral-900;
+    }
 
-  .red-underline {
-    @apply underline decoration-red-900 decoration-2 underline-offset-4 hover:bg-red-900 rounded-xl p-1 transition duration-200;
-  }
+    .red-underline {
+        @apply underline decoration-red-900 decoration-2 underline-offset-4 hover:bg-red-900 rounded-xl p-1 transition duration-200;
+    }
 }

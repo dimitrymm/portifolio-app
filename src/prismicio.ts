@@ -6,7 +6,7 @@ import config from '../slicemachine.config.json';
  * The project's Prismic repository name.
  */
 export const repositoryName =
-  process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || config.repositoryName;
+    process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || config.repositoryName;
 
 /**
  * A list of Route Resolver objects that define how a document's `url` field is resolved.
@@ -15,15 +15,15 @@ export const repositoryName =
  */
 // TODO: Update the routes array to match your project's route structure.
 const routes: prismic.ClientConfig['routes'] = [
-  {
-    type: 'post_blog', // Tipo do documento no Prismic
-    uid: 'homepage', // Identificador único para a rota da homepage
-    path: '/', // Caminho da URL para a homepage
-  },
-  {
-    type: 'post_blog', // Tipo do documento para postagens do blog
-    path: '/:uid', // Caminho dinâmico da URL para cada postagem, baseado em seu UID
-  },
+    {
+        type: 'post_blog', // Tipo do documento no Prismic
+        uid: 'homepage', // Identificador único para a rota da homepage
+        path: '/', // Caminho da URL para a homepage
+    },
+    {
+        type: 'post_blog', // Tipo do documento para postagens do blog
+        path: '/:uid', // Caminho dinâmico da URL para cada postagem, baseado em seu UID
+    },
 ];
 
 /**
@@ -33,21 +33,21 @@ const routes: prismic.ClientConfig['routes'] = [
  * @param config - Configuration for the Prismic client.
  */
 export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
-  const client = prismic.createClient(repositoryName, {
-    routes,
-    fetchOptions:
-      process.env.NODE_ENV === 'production'
-        ? { next: { tags: ['prismic'] }, cache: 'force-cache' }
-        : { next: { revalidate: 5 } },
-    accessToken: process.env.PRISMIC_ACCESS_TOKEN, //NOTE: Adicione essa linha
-    ...config,
-  });
+    const client = prismic.createClient(repositoryName, {
+        routes,
+        fetchOptions:
+            process.env.NODE_ENV === 'production'
+                ? { next: { tags: ['prismic'] }, cache: 'force-cache' }
+                : { next: { revalidate: 5 } },
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN, //NOTE: Adicione essa linha
+        ...config,
+    });
 
-  prismicNext.enableAutoPreviews({
-    client,
-    previewData: config.previewData,
-    req: config.req,
-  });
+    prismicNext.enableAutoPreviews({
+        client,
+        previewData: config.previewData,
+        req: config.req,
+    });
 
-  return client;
+    return client;
 };
